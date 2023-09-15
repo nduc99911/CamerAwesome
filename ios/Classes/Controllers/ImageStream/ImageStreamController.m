@@ -88,9 +88,10 @@ NSInteger const MaxPendingProcessedImage = 4;
     @"rotation": [self getInputImageOrientation:orientation]
   };
   
-  dispatch_async(dispatch_get_main_queue(), ^{
+(*   dispatch_async(dispatch_get_main_queue(), ^{
     self->_imageStreamEventSink(imageBuffer);
-  });
+  }); *)
+  self->_imageStreamEventSink(imageBuffer);
   
 }
 
